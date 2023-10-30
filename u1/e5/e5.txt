@@ -1,0 +1,3 @@
+cp my_file.txt my_file_copy.txt
+mv my_file_copy.txt ~/
+mv ~/my_file_copy.txt ~/renamed_file.txt

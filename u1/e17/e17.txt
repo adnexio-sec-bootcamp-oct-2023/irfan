@@ -1,0 +1,8 @@
+a. Update your system's package list.
+sudo apt update
+
+b. Install the htop tool.
+sudo apt install htop
+
+c. Once installed, run htop to view system processes, then exit.
+htop

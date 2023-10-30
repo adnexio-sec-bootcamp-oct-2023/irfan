@@ -1,0 +1,20 @@
+a. Create a file named original.txt.
+echo "This is the content of the original file." > original.txt
+
+b. Create a soft link named softlink.txt that points to
+ original.txt.
+ln -s original.txt softlink.txt
+
+c. Create a hard link named hardlink.txt that points to
+ original.txt.
+ln original.txt hardlink.txt
+
+d. Observe the differences between the origiTnal, soft link,
+ and hard link.
+
+Content:-all original.txt, softlink.txt and hardlink.txt have the
+    same content.
+
+Directory: original.txt and hardlink.txt display same types but
+    softlink.txt display softlink.txt -> original.txt
+

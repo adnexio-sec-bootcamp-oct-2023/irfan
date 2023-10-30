@@ -1,0 +1,3 @@
+touch private.txt
+chmod 600 private.txt
+ls -l private.txt
