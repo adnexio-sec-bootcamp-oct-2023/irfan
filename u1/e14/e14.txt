@@ -1,0 +1,14 @@
+Print all the environment variables.
+env
+
+Identify the PATH variable and its values.
+env | grep PATH
+
+PATH=/home/funmeen/.vscode-server/bin/f1b07bd25dfad64b0167beb15359ae573aecd2cc/bin/remote-cli
+:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr
+/lib/wsl/lib:/mnt/c/Python311/Scripts/:/mnt/c/Python311/:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:
+/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/
+System32/OpenSSH/:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)
+/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:
+/mnt/c/Program Files/Git/cmd:/mnt/c/Users/muhym/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users
+/muhym/AppData/Roaming/npm:/mnt/c/Users/muhym/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin

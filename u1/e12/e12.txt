@@ -1,0 +1,3 @@
+Determine how much disk space is used and how much
+ is free on your system.
+df -h

@@ -1,0 +1,37 @@
+a. Display all network interfaces.
+ifconfig
+
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.31.118.200  netmask 255.255.240.0  broadcast 172.31.127.255
+        inet6 fe80::215:5dff:febb:3772  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:bb:37:72  txqueuelen 1000  (Ethernet)
+        RX packets 76213  bytes 252922073 (252.9 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 36808  bytes 2938040 (2.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 96872  bytes 617179339 (617.1 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 96872  bytes 617179339 (617.1 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+b. Display the routing table.
+ip route
+
+default via 172.31.112.1 dev eth0 proto kernel 
+172.31.112.0/20 dev eth0 proto kernel scope link src 172.31.118.200 
+
+c. Check the active network connections.
+netstat -tuln
+
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.1:44193         0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.53:53           0.0.0.0:*               LISTEN     
+udp        0      0 127.0.0.53:53           0.0.0.0:*                          
+udp        0      0 127.0.0.1:323           0.0.0.0:*                          
+udp6       0      0 ::1:323                 :::*   

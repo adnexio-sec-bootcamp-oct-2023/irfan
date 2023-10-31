@@ -1,0 +1,10 @@
+// Searching for a file
+a. Navigate to your home directory
+cd ~
+
+b. Create new file named needle.txt
+touch needle.txt
+
+c. Now, using a terminal command, search for the
+ file named needle.txt starting from the root directory
+sudo find / -xdev -type f -name "needle.txt"

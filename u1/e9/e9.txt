@@ -1,0 +1,3 @@
+touch content.txt
+echo "Ubuntu is a great operating system!"> content.txt
+echo "It's based on Debian." >> content.txt

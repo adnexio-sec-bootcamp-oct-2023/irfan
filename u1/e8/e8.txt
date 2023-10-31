@@ -1,0 +1,7 @@
+cd ~
+mkdir compress_folder
+cd compress_folder
+touch one.txt two.txt three.txt
+tar -czrf my_archive.tar.gz compress_folder
+mkdir extracted_folder
+tar -xzrf my_archive.tar.gz -C extracted_folder

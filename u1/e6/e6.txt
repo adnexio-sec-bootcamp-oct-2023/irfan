@@ -1,0 +1,2 @@
+rm ~/renamed_file.txt
+rm -r ~/my_folder

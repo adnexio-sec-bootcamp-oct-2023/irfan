@@ -1,0 +1,15 @@
+a. Display all users on your system.
+cut -d: -f1 /etc/passwd
+
+b. Display all groups on your system.
+cut -d: f1 /etc/group
+
+c. Create a new user named testuser (ensure it's a 
+user without superuser privileges).
+sudo add user testuser
+
+d. Add testuser to a group named testgroup.
+ If testgroup doesn't exist, create it first.
+getent group testgroup
+sudo groupadd testgroup
+sudo usermod -aG testgroup testuser

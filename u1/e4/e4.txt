@@ -1,0 +1,1 @@
+mkdir my_folder, cd my_folder touch my_file.txt

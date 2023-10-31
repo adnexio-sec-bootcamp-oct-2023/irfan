@@ -1,0 +1,5 @@
+a. Find out which processes are currently running on your system
+ps aux
+
+b. Start the top command, observe for a few seconds, then exit.
+top

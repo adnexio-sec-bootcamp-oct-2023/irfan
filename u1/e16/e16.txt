@@ -1,0 +1,10 @@
+Gather the following system information using terminal commands:
+a. Display the current date and time.
+date
+
+b. Show the system's uptime.
+uptime
+
+c. Display detailed information about the system hardware.
+sudo apt-get install lshw
+
