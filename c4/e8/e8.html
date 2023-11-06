@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Loop Example</title>
+</head>
+<body>
+    <button id="myButton">Click Me</button>
+    <script>
+        const button = document.getElementById('myButton');
+
+        button.addEventListener('click', () => {
+            console.log('Button Clicked');
+        });
+
+        // Simulate a long-running while loop
+        const start = Date.now();
+        while (Date.now() - start < 5000) {
+            // This loop runs for approximately 5 seconds
+        }
+    </script>
+</body>
+</html>
