@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encode Exercise</title>
+    <style>
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        div {
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>URL Encode Exercise</h1>
+
+    <form id="urlEncodeForm">
+        <label for="textToEncode">Enter Text:</label>
+        <textarea id="textToEncode" name="textToEncode" required></textarea>
+
+        <input type="submit" value="Encode">
+    </form>
+
+    <div id="encodedResult"></div>
+
+    <script>
+        document.getElementById("urlEncodeForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            var textToEncode = document.getElementById("textToEncode").value;
+            var encodedText = encodeURIComponent(textToEncode);
+
+            // Display the encoded text in the result div
+            document.getElementById("encodedResult").innerHTML = "<strong>Encoded URL:</strong> " + encodedText;
+        });
+    </script>
+
+</body>
+</html>
