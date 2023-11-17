@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Integration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        #custom-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        #custom-play {
+            cursor: pointer;
+        }
+
+        #youtube-video {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Video Integration</h1>
+
+    <h2>Custom Controls Video</h2>
+    <div id="custom-controls">
+        <button id="custom-play">Play</button>
+        <progress id="custom-progress" value="0" max="100"></progress>
+        <span id="custom-time">0:00 / 0:00</span>
+    </div>
+    <video id="custom-video" width="800" height="450" controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <h2>YouTube Video</h2>
+    <div id="youtube-video">
+        <embed src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></embed>
+    </div>
+
+    <script>
+        var customVideo = document.getElementById("custom-video");
+        var customPlayButton = document.getElementById("custom-play");
+        var customProgress = document.getElementById("custom-progress");
+        var customTime = document.getElementById("custom-time");
+
+        customPlayButton.addEventListener("click", function () {
+            if (customVideo.paused || customVideo.ended) {
+                customVideo.play();
+                customPlayButton.textContent = "Pause";
+            } else {
+                customVideo.pause();
+                customPlayButton.textContent = "Play";
+            }
+        });
+
+        customVideo.addEventListener("timeupdate", function () {
+            var value = (customVideo.currentTime / customVideo.duration) * 100;
+            customProgress.value = value;
+            customTime.textContent = formatTime(customVideo.currentTime) + " / " + formatTime(customVideo.duration);
+        });
+
+        function formatTime(time) {
+            var minutes = Math.floor(time / 60);
+            var seconds = Math.floor(time % 60);
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            return minutes + ":" + seconds;
+        }
+    </script>
+
+</body>
+</html>

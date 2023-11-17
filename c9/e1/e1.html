@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Header</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        #menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 600px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background-color: #333;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            #menu-icon {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a id="logo" href="#">Your Logo</a>
+
+        <!-- Hamburger Menu Icon for Mobile -->
+        <div id="menu-icon">&#9776;</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <script>
+        document.getElementById("menu-icon").addEventListener("click", function() {
+            document.querySelector("nav").classList.toggle("show");
+        });
+    </script>
+
+</body>
+</html>
