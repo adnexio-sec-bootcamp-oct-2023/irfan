@@ -1,0 +1,27 @@
+/* Styling by ID */
+#uniqueParagraph {
+    font-weight: bold;
+    color: blue;
+}
+
+/* Styling by Class */
+.special {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.greenSpan {
+    color: green;
+}
+
+.squareBullet {
+    list-style-type: square;
+}
+
+/* Styling with Pseudo-classes */
+.hoverRed:hover {
+    color: red;
+}

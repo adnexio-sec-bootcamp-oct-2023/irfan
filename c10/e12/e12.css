@@ -1,0 +1,60 @@
+body {
+    font-family: 'Helvetica', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'CustomFontURL', sans-serif;
+    color: #333;
+}
+
+/* Load custom font from URL */
+@font-face {
+    font-family: 'CustomFontURL';
+    src: url('https://example.com/custom-font-url.woff2') format('woff2'),
+         url('https://example.com/custom-font-url.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply custom font to elements */
+.custom-font-url {
+    font-family: 'CustomFontURL', sans-serif;
+}
+
+/* Load custom font from file */
+@font-face {
+    font-family: 'CustomFontFile';
+    src: url('custom-font-file.woff2') format('woff2'),
+         url('custom-font-file.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Apply custom font to elements */
+.custom-font-file {
+    font-family: 'CustomFontFile', sans-serif;
+}
+
+p {
+    font-size: 16px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}

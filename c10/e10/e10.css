@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Common Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+/* Glow Button */
+.glow-button {
+    background-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+}
+
+.glow-button:hover {
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+}
+
+.glow-button:active {
+    background-color: #2980b9;
+}
+
+.glow-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.7);
+}
+
+/* Press Button */
+.press-button {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.press-button:hover {
+    background-color: #c0392b;
+}
+
+.press-button:active {
+    background-color: #922b21;
+}
+
+.press-button:focus {
+    outline: none;
+}
+
+/* Outline Button */
+.outline-button {
+    background-color: transparent;
+    color: #3498db;
+    border: 2px solid #3498db;
+}
+
+.outline-button:hover {
+    color: #2980b9;
+    border: 2px solid #2980b9;
+}
+
+.outline-button:active {
+    color: #1f618d;
+    border: 2px solid #1f618d;
+}
+
+.outline-button:focus {
+    outline: none;
+}

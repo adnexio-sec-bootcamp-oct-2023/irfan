@@ -1,0 +1,16 @@
+/* ID-level specificity */
+#specificityExample {
+    background-color: blue;
+}
+
+/* Class-level specificity */
+.specificityExample {
+    background-color: yellow;
+}
+
+/* Element-level specificity */
+div {
+    background-color: orange;
+}
+
+/* Inline styles have the highest specificity */

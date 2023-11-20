@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicons and Dark Mode</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon-light.ico" id="favicon">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Listen for changes to the CSS prefers-color-scheme media query
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+                // Get the current favicon link element
+                const favicon = document.getElementById('favicon');
+                // Set the href to the dark or light favicon based on the media query event
+                favicon.href = event.matches ? 'favicon-dark.ico' : 'favicon-light.ico';
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Favicon Exercise</h1>
+    <p>Check out the favicon in the tab! Now switch to dark mode to see it change.</p>
+</body>
+</html>

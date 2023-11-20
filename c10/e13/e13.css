@@ -1,0 +1,13 @@
+/* Dark mode media query */
+@media (prefers-color-scheme: dark) {
+    /* CSS to swap the favicon for dark mode */
+    :root {
+        --favicon-href: url('favicon-dark.ico');
+    }
+}
+
+/* Use the CSS variable to update the favicon href */
+#favicon {
+    /* Default to light mode favicon */
+    background-image: var(--favicon-href, url('favicon-light.ico'));
+}

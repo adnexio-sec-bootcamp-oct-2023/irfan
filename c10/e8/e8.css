@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-color: #ff0;
+}
+
+.navigation {
+    background-color: #0f0;
+}
+
+.main-content {
+    background-color: #00f;
+}
+
+.sidebar {
+    background-color: #f0f;
+}
+
+.footer {
+    background-color: #0ff;
+}

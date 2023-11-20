@@ -1,0 +1,40 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Text Alignment and Line Height */
+.align-left {
+    text-align: left;
+    line-height: 1.6;
+}
+
+/* Blockquote Style */
+.quote {
+    margin: 20px 0;
+    font-style: italic;
+}
+
+/* Text Alignment and Text Transform (Uppercase) */
+.align-right {
+    text-align: right;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* Text Alignment and Text Transform (Capitalize) */
+.centered {
+    text-align: center;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
