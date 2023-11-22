@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    .override-font {
+      font-family: 'Times New Roman', serif;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>This header inherits the body's font family and size</h1>
+  
+  <p>This paragraph also inherits the body's font family and size.</p>
+  
+  <div>
+    <p>This div inherits the body's font styles.</p>
+  </div>
+  
+  <div class="override-font">
+    <p>This div will have the 'Times New Roman' font family and 18px font size.</p>
+  </div>
+
+</body>
+</html>
+
+<!--
+Inheritance:
+By default, most CSS properties are inherited from parent elements to their children. 
+The font-family and font-size properties defined on the body element are inherited by
+its child elements (h1, p, and the div).
+
+Specificity:
+Specificity is a set of rules that determines which CSS rule is applied when there are
+conflicting styles. The .override-font class has a more specific style for font-family
+and font-size, so it will override the inherited styles for elements with this class.
+                    -->
